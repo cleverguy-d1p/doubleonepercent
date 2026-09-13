@@ -1,0 +1,1314 @@
+[
+  {
+    "id": "s1",
+    "title": "Basic information",
+    "fields": [
+      {
+        "id": "q719",
+        "label": "Full name:",
+        "type": "text"
+      },
+      {
+        "id": "q730",
+        "label": "Date of birth:",
+        "type": "date"
+      },
+      {
+        "id": "q750",
+        "label": "Height:",
+        "type": "text"
+      },
+      {
+        "id": "q758",
+        "label": "Current weight:",
+        "type": "text"
+      },
+      {
+        "id": "q774",
+        "label": "Approximate body-fat percentage (if known):",
+        "type": "text"
+      },
+      {
+        "id": "q818",
+        "label": "Lowest weight in the past 3 years:",
+        "type": "text"
+      },
+      {
+        "id": "q853",
+        "label": "Highest weight in the past 3 years:",
+        "type": "text"
+      },
+      {
+        "id": "q889",
+        "label": "Weight you remember looking/feeling your best at:",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "id": "s2",
+    "title": "Lifestyle",
+    "fields": [
+      {
+        "id": "q954",
+        "label": "Occupation:",
+        "type": "text"
+      },
+      {
+        "id": "q967",
+        "label": "Location/time zone:",
+        "type": "text"
+      },
+      {
+        "id": "q988",
+        "label": "Describe your normal work schedule and an average weekday from waking up until going to bed.",
+        "type": "textarea"
+      },
+      {
+        "id": "q1082",
+        "label": "How different are your weekends from your weekdays?",
+        "type": "textarea"
+      },
+      {
+        "id": "q1135",
+        "label": "Do you have regular travel, work dinners, family commitments, or other obligations that could affect your training or nutrition?",
+        "type": "textarea"
+      },
+      {
+        "id": "q1265",
+        "label": "Are there any vacations, work trips, events, or major schedule changes coming up during the next 90 days?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s3",
+    "title": "Your goals",
+    "fields": [
+      {
+        "id": "q1392",
+        "label": "What are the three biggest things you'd like to accomplish over the next 90 days?",
+        "type": "textarea"
+      },
+      {
+        "id": "q1485",
+        "label": "If you could choose only one primary goal, what would it be?",
+        "type": "textarea"
+      },
+      {
+        "id": "q1547",
+        "label": "How much weight/body fat would you ideally like to lose?",
+        "type": "textarea"
+      },
+      {
+        "id": "q1605",
+        "label": "How important is gaining muscle compared with losing fat?",
+        "type": "textarea"
+      },
+      {
+        "id": "q1664",
+        "label": "Are there specific areas of your physique you'd particularly like to improve?",
+        "type": "textarea"
+      },
+      {
+        "id": "q1743",
+        "label": "Describe how you'd ideally like your body to look at the end of these 90 days.",
+        "type": "textarea"
+      },
+      {
+        "id": "q1823",
+        "label": "Beyond appearance, what would you like to improve? For example: strength, energy, cardiovascular fitness, mobility, endurance, confidence, cycling ability, etc.",
+        "type": "textarea"
+      },
+      {
+        "id": "q1985",
+        "label": "At the end of 90 days, what specific results would make you feel the program had been a major success?",
+        "type": "textarea"
+      },
+      {
+        "id": "q2089",
+        "label": "Why is making this change important to you right now?",
+        "type": "textarea"
+      },
+      {
+        "id": "q2144",
+        "label": "On a scale of 1–10, how committed are you to making the necessary changes over the next 90 days?",
+        "type": "scale"
+      },
+      {
+        "id": "q2242",
+        "label": "What do you think is most likely to get in the way of your progress?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s4",
+    "title": "Health & Medical history",
+    "fields": [
+      {
+        "id": "q2346",
+        "label": "Do you currently have any injuries, pain, or physical limitations? If yes, explain where, how severe, and which movements or activities aggravate them.",
+        "type": "textarea"
+      },
+      {
+        "id": "q2499",
+        "label": "Do you have any previous injuries that could affect training or cycling?",
+        "type": "textarea"
+      },
+      {
+        "id": "q2573",
+        "label": "Have you had any surgeries? If yes, please list them and approximate dates.",
+        "type": "textarea"
+      },
+      {
+        "id": "q2650",
+        "label": "Have you ever been advised by a doctor or physical therapist to avoid or modify certain exercises?",
+        "type": "textarea"
+      },
+      {
+        "id": "q2750",
+        "label": "Do you have any diagnosed medical conditions that could affect exercise, nutrition, cardiovascular training, hydration, or recovery?",
+        "type": "textarea"
+      },
+      {
+        "id": "q2884",
+        "label": "Are you currently taking any prescription medications? Please list them and the reason for taking them if you're comfortable sharing.",
+        "type": "textarea"
+      },
+      {
+        "id": "q3019",
+        "label": "Are you currently taking any supplements? Please include vitamins, protein powders, creatine, electrolytes, etc.",
+        "type": "textarea"
+      },
+      {
+        "id": "q3133",
+        "label": "Do you have any known food allergies or intolerances?",
+        "type": "textarea"
+      },
+      {
+        "id": "q3188",
+        "label": "Do you experience regular digestive issues such as bloating, reflux, constipation, diarrhea, or stomach discomfort?",
+        "type": "textarea"
+      },
+      {
+        "id": "q3305",
+        "label": "When was your most recent physical and blood work? Were there any results your doctor considered abnormal or that you think I should know about?",
+        "type": "textarea"
+      },
+      {
+        "id": "q3451",
+        "label": "Is there anything else regarding your health that could be relevant before beginning a new nutrition, strength, and cardiovascular program?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s5",
+    "title": "Current nutrition",
+    "fields": [
+      {
+        "id": "q3619",
+        "label": "Walk me through everything you ate and drank yesterday, from waking up until going to bed. Include approximate quantities where possible, including snacks, sauces, drinks, alcohol, etc.",
+        "type": "textarea"
+      },
+      {
+        "id": "q3806",
+        "label": "Now describe what you would consider a normal weekday of eating.",
+        "type": "textarea"
+      },
+      {
+        "id": "q3872",
+        "label": "What does your eating typically look like on weekends?",
+        "type": "textarea"
+      },
+      {
+        "id": "q3928",
+        "label": "How many meals do you normally eat per day?",
+        "type": "textarea"
+      },
+      {
+        "id": "q3973",
+        "label": "What times do you normally eat?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4006",
+        "label": "Do you currently track calories or macronutrients?",
+        "type": "select",
+        "options": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "q4058",
+        "label": "If yes, approximately:",
+        "type": "note"
+      },
+      {
+        "id": "q4082",
+        "label": "Daily calories:",
+        "type": "text",
+        "when": {
+          "id": "q4006",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q4098",
+        "label": "Protein:",
+        "type": "text",
+        "when": {
+          "id": "q4006",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q4107",
+        "label": "Carbohydrates:",
+        "type": "text",
+        "when": {
+          "id": "q4006",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q4122",
+        "label": "Fat:",
+        "type": "text",
+        "when": {
+          "id": "q4006",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q4128",
+        "label": "Have you tracked food/macros before? If so, did you find it easy or difficult to maintain?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4220",
+        "label": "Would you prefer an exact meal plan, calorie/macro targets with food choices, or a combination of both?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4325",
+        "label": "How often do you eat at restaurants or order takeout each week?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4390",
+        "label": "Who normally prepares your food?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4424",
+        "label": "How comfortable are you cooking?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4458",
+        "label": "Do you have regular access to a kitchen?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4500",
+        "label": "Do you own a digital food scale?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4534",
+        "label": "How much time are you realistically willing to spend preparing food each day/week?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4618",
+        "label": "Please list foods you regularly eat and genuinely enjoy.",
+        "type": "note"
+      },
+      {
+        "id": "q4676",
+        "label": "Favorite protein sources:",
+        "type": "text"
+      },
+      {
+        "id": "q4702",
+        "label": "Favorite carbohydrate sources:",
+        "type": "text"
+      },
+      {
+        "id": "q4733",
+        "label": "Favorite fruits:",
+        "type": "text"
+      },
+      {
+        "id": "q4750",
+        "label": "Favorite vegetables:",
+        "type": "text"
+      },
+      {
+        "id": "q4771",
+        "label": "Favorite snacks:",
+        "type": "text"
+      },
+      {
+        "id": "q4788",
+        "label": "Favorite breakfast foods:",
+        "type": "text"
+      },
+      {
+        "id": "q4815",
+        "label": "Are there any foods you dislike or absolutely do not want included?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4884",
+        "label": "Are there any foods you tend to overeat or have difficulty controlling?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4957",
+        "label": "How often do you eat sweets/desserts?",
+        "type": "textarea"
+      },
+      {
+        "id": "q4996",
+        "label": "How often do you eat fast food or heavily processed foods?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5056",
+        "label": "Approximately how much water do you drink per day?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5108",
+        "label": "How much coffee/caffeine do you consume, and at what times?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5169",
+        "label": "Do you drink alcohol? If yes, what do you typically drink, how much, and how often?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5254",
+        "label": "Do you regularly drink soda, juice, energy drinks, or other caloric beverages?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5334",
+        "label": "Do you tend to eat late at night?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5369",
+        "label": "Do you experience significant cravings? If so, when and for what foods?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5442",
+        "label": "What time of day are you normally hungriest?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5488",
+        "label": "Do stress, boredom, work, social situations, or emotions noticeably change the way you eat?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5581",
+        "label": "Have you ever experienced binge eating or periods where you feel out of control around food?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5675",
+        "label": "Have you followed any specific diets in the past? What worked and what didn't?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5755",
+        "label": "What is the longest you've successfully maintained a nutrition plan?",
+        "type": "textarea"
+      },
+      {
+        "id": "q5825",
+        "label": "What normally causes you to stop following one?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s6",
+    "title": "Current activity & Training",
+    "fields": [
+      {
+        "id": "q5911",
+        "label": "Are you currently exercising? If yes, walk me through your entire current week of exercise.",
+        "type": "textarea"
+      },
+      {
+        "id": "q6004",
+        "label": "How many days per week are you currently strength training?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6065",
+        "label": "How long is an average workout?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6098",
+        "label": "List the exercises you currently perform regularly if possible.",
+        "type": "textarea"
+      },
+      {
+        "id": "q6163",
+        "label": "How would you describe your weight-training experience?",
+        "type": "select",
+        "options": [
+          "Beginner",
+          "Intermediate",
+          "Advanced"
+        ]
+      },
+      {
+        "id": "q6220",
+        "label": "Beginner / Intermediate / Advanced",
+        "type": "note"
+      },
+      {
+        "id": "q6256",
+        "label": "How many total years have you spent weight training consistently?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6323",
+        "label": "Have you previously followed a structured strength program?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6384",
+        "label": "What types of training/exercises have you enjoyed most?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6441",
+        "label": "What exercises or styles of training do you dislike?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6495",
+        "label": "Do you currently do cardio? If yes:",
+        "type": "text"
+      },
+      {
+        "id": "q6532",
+        "label": "Type:",
+        "type": "text"
+      },
+      {
+        "id": "q6538",
+        "label": "Days per week:",
+        "type": "text"
+      },
+      {
+        "id": "q6553",
+        "label": "Duration:",
+        "type": "text"
+      },
+      {
+        "id": "q6563",
+        "label": "Typical intensity:",
+        "type": "text"
+      },
+      {
+        "id": "q6583",
+        "label": "Approximately how many steps do you average per day, if known?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6647",
+        "label": "Outside of deliberate exercise, would you describe your normal day as:",
+        "type": "select",
+        "options": [
+          "Mostly sedentary",
+          "Lightly active",
+          "Moderately active",
+          "Very active"
+        ]
+      },
+      {
+        "id": "q6719",
+        "label": "Mostly sedentary / Lightly active / Moderately active / Very active",
+        "type": "note"
+      },
+      {
+        "id": "q6788",
+        "label": "Approximately how many hours per day do you spend sitting?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6848",
+        "label": "Do you wear an Apple Watch, Garmin, WHOOP, Oura, Fitbit, or other fitness tracker? If so, which one?",
+        "type": "textarea"
+      },
+      {
+        "id": "q6950",
+        "label": "If you have the data available, please include your approximate:",
+        "type": "note"
+      },
+      {
+        "id": "q7016",
+        "label": "Average daily steps:",
+        "type": "text"
+      },
+      {
+        "id": "q7037",
+        "label": "Resting heart rate:",
+        "type": "text"
+      },
+      {
+        "id": "q7057",
+        "label": "Average daily active calories:",
+        "type": "text"
+      },
+      {
+        "id": "q7088",
+        "label": "Average sleep:",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "id": "s7",
+    "title": "Training logistics",
+    "fields": [
+      {
+        "id": "q7132",
+        "label": "Where will you primarily train?",
+        "type": "select",
+        "options": [
+          "Commercial gym",
+          "Home gym",
+          "Outdoors",
+          "Combination"
+        ]
+      },
+      {
+        "id": "q7165",
+        "label": "Commercial gym / Home gym / Outdoors / Combination",
+        "type": "note"
+      },
+      {
+        "id": "q7217",
+        "label": "If it's a gym, please tell me which gym if possible or describe the equipment available.",
+        "type": "textarea"
+      },
+      {
+        "id": "q7307",
+        "label": "If you're training at home, list all equipment you have access to.",
+        "type": "textarea"
+      },
+      {
+        "id": "q7375",
+        "label": "How many days per week can you realistically commit to structured training?",
+        "type": "textarea"
+      },
+      {
+        "id": "q7452",
+        "label": "Which days work best?",
+        "type": "textarea"
+      },
+      {
+        "id": "q7475",
+        "label": "How much time can you realistically dedicate to each workout?",
+        "type": "textarea"
+      },
+      {
+        "id": "q7538",
+        "label": "What time of day do you prefer to train?",
+        "type": "textarea"
+      },
+      {
+        "id": "q7580",
+        "label": "Are there any days when training is impossible because of work or other commitments?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s8",
+    "title": "Strength & Movement",
+    "fields": [
+      {
+        "id": "q7695",
+        "label": "If you know them, provide your approximate current or recent working weights for the following. Don't worry if you don't know them.",
+        "type": "textarea"
+      },
+      {
+        "id": "q7828",
+        "label": "Squat or leg press:",
+        "type": "text"
+      },
+      {
+        "id": "q7848",
+        "label": "Deadlift/Romanian deadlift:",
+        "type": "text"
+      },
+      {
+        "id": "q7876",
+        "label": "Bench press or dumbbell press:",
+        "type": "text"
+      },
+      {
+        "id": "q7907",
+        "label": "Shoulder press:",
+        "type": "text"
+      },
+      {
+        "id": "q7923",
+        "label": "Pull-ups or lat pulldown:",
+        "type": "text"
+      },
+      {
+        "id": "q7949",
+        "label": "Row:",
+        "type": "text"
+      },
+      {
+        "id": "q7955",
+        "label": "Are there exercises you cannot perform comfortably?",
+        "type": "textarea"
+      },
+      {
+        "id": "q8008",
+        "label": "Do you experience knee, hip, ankle, lower-back, shoulder, neck, wrist, or elbow discomfort during exercise?",
+        "type": "textarea"
+      },
+      {
+        "id": "q8117",
+        "label": "How would you rate your overall mobility from 1–10?",
+        "type": "scale"
+      },
+      {
+        "id": "q8170",
+        "label": "Do you currently stretch or perform mobility work?",
+        "type": "textarea"
+      },
+      {
+        "id": "q8222",
+        "label": "Are there particular areas where you feel stiff or restricted?",
+        "type": "textarea"
+      },
+      {
+        "id": "q8286",
+        "label": "Can you comfortably squat, hinge, lunge, push, pull, and perform exercises overhead?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s9",
+    "title": "Cycling history & Goals",
+    "fields": [
+      {
+        "id": "cycling",
+        "label": "Is cycling part of your training or goals?",
+        "type": "select",
+        "options": [
+          "Yes",
+          "No"
+        ]
+      },
+      {
+        "id": "q8405",
+        "label": "Tell me about your previous cycling experience in as much detail as possible.",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8484",
+        "label": "What type of cycling did you primarily do?",
+        "type": "select",
+        "options": [
+          "Road",
+          "Mountain",
+          "Gravel",
+          "Indoor",
+          "Recreational",
+          "Competitive",
+          "Other"
+        ],
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8528",
+        "label": "Road / Mountain / Gravel / Indoor / Recreational / Competitive / Other",
+        "type": "note",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8600",
+        "label": "How long has it been since you were cycling consistently?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8659",
+        "label": "At your peak, approximately how many days per week were you riding?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8728",
+        "label": "Approximately how many miles/kilometers per week?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8779",
+        "label": "How long was a typical ride?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8809",
+        "label": "What was your longest regular ride?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8846",
+        "label": "What caused you to stop or reduce cycling?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8890",
+        "label": "Are you currently riding at all? If yes, describe your current weekly volume and intensity.",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q8983",
+        "label": "Do you currently own a bike and have access to it?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9035",
+        "label": "Do you have an indoor trainer?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9067",
+        "label": "Do you use Strava, Garmin, Zwift, or another cycling platform?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9131",
+        "label": "If known:",
+        "type": "note",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9142",
+        "label": "Previous/current FTP:",
+        "type": "text",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9164",
+        "label": "Typical average heart rate on rides:",
+        "type": "text",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9201",
+        "label": "Maximum heart rate:",
+        "type": "text",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9221",
+        "label": "Typical average speed:",
+        "type": "text",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9245",
+        "label": "Don't worry if you don't know these numbers.",
+        "type": "note",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9291",
+        "label": "When you currently ride or perform cardio, what seems to limit you first?",
+        "type": "select",
+        "options": [
+          "Breathing/cardio",
+          "Leg endurance",
+          "Strength",
+          "Body weight",
+          "Pain",
+          "Mobility",
+          "General conditioning",
+          "Other"
+        ],
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9366",
+        "label": "Breathing/cardio / Leg endurance / Strength / Body weight / Pain / Mobility / General conditioning / Other",
+        "type": "note",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9474",
+        "label": "Is your immediate goal simply to comfortably start cycling again, or do you eventually want to return to longer or more serious riding?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q9611",
+        "label": "Do you have any specific cycling event, distance, trip, race, or date you'd eventually like to prepare for?",
+        "type": "textarea",
+        "when": {
+          "id": "cycling",
+          "value": "Yes"
+        }
+      }
+    ]
+  },
+  {
+    "id": "s10",
+    "title": "Sleep, Stress & Recovery",
+    "fields": [
+      {
+        "id": "q9754",
+        "label": "Typical bedtime:",
+        "type": "text"
+      },
+      {
+        "id": "q9771",
+        "label": "Typical wake time:",
+        "type": "text"
+      },
+      {
+        "id": "q9790",
+        "label": "Average hours of sleep:",
+        "type": "text"
+      },
+      {
+        "id": "q9815",
+        "label": "How would you rate your sleep quality from 1–10?",
+        "type": "scale"
+      },
+      {
+        "id": "q9865",
+        "label": "Do you normally wake up feeling rested?",
+        "type": "textarea"
+      },
+      {
+        "id": "q9906",
+        "label": "Do you have difficulty falling asleep or staying asleep?",
+        "type": "textarea"
+      },
+      {
+        "id": "q9964",
+        "label": "Do you snore or have diagnosed/suspected sleep apnea?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10019",
+        "label": "How would you rate your average daily energy from 1–10?",
+        "type": "scale"
+      },
+      {
+        "id": "q10076",
+        "label": "How would you rate your current stress from 1–10?",
+        "type": "scale"
+      },
+      {
+        "id": "q10127",
+        "label": "What are the biggest sources of stress in your life right now?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10191",
+        "label": "What do you currently do for recovery or stress management?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10252",
+        "label": "How many complete rest days do you normally take each week?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s11",
+    "title": "Previous results & Roadblocks",
+    "fields": [
+      {
+        "id": "q10352",
+        "label": "Have you successfully lost body fat before?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10397",
+        "label": "If yes, how much did you lose, how did you do it, and were you able to maintain it?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10482",
+        "label": "Have you intentionally gained muscle before?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10528",
+        "label": "What approaches have worked best for you?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10571",
+        "label": "What hasn't worked?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10592",
+        "label": "Have you previously worked with a personal trainer, nutritionist, or online coach?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10676",
+        "label": "If yes, what did you like about the experience?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10725",
+        "label": "What didn't you like?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10748",
+        "label": "What typically causes you to lose consistency with training?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10810",
+        "label": "What typically causes you to lose consistency with nutrition?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10873",
+        "label": "When you get off track, what normally happens?",
+        "type": "textarea"
+      },
+      {
+        "id": "q10921",
+        "label": "What do you think would help you stay accountable this time?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s12",
+    "title": "Program preferences",
+    "fields": [
+      {
+        "id": "q11012",
+        "label": "For nutrition, would you prefer:",
+        "type": "text"
+      },
+      {
+        "id": "q11046",
+        "label": "A) Exact meals and quantities",
+        "type": "note"
+      },
+      {
+        "id": "q11076",
+        "label": "B) Calories/macros with flexible food choices",
+        "type": "note"
+      },
+      {
+        "id": "q11122",
+        "label": "C) A combination of both",
+        "type": "note"
+      },
+      {
+        "id": "q11148",
+        "label": "Are you comfortable weighing your food, at least during the initial phase?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11224",
+        "label": "Are you willing to track your food if necessary?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11274",
+        "label": "Are you willing to weigh yourself regularly?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11320",
+        "label": "Are you comfortable sending progress photos?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11366",
+        "label": "Are you willing to maintain a daily step target?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11416",
+        "label": "How many days per week are you willing to strength train?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11475",
+        "label": "How many days per week are you willing to dedicate to cardio/cycling?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11546",
+        "label": "Do you prefer shorter/more frequent workouts or fewer/longer workouts?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11618",
+        "label": "Do you prefer very specific instructions or more flexibility?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11681",
+        "label": "What type of accountability works best for you?",
+        "type": "textarea"
+      },
+      {
+        "id": "q11730",
+        "label": "If you're falling behind, do you want me to push you directly, or do you respond better to a more flexible approach?",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "id": "s13",
+    "title": "Baseline measurements & Photos",
+    "fields": [
+      {
+        "id": "photos",
+        "label": "Would you like to upload baseline photos now?",
+        "type": "select",
+        "options": [
+          "Yes",
+          "Later"
+        ]
+      },
+      {
+        "id": "q11888",
+        "label": "On one morning before breakfast, please take the following measurements. Don't worry if you can't provide every measurement.",
+        "type": "note"
+      },
+      {
+        "id": "q12014",
+        "label": "Body weight:",
+        "type": "text"
+      },
+      {
+        "id": "q12027",
+        "label": "Waist at navel:",
+        "type": "text"
+      },
+      {
+        "id": "q12043",
+        "label": "Waist at narrowest point:",
+        "type": "text"
+      },
+      {
+        "id": "q12069",
+        "label": "Hips at widest point:",
+        "type": "text"
+      },
+      {
+        "id": "q12091",
+        "label": "Chest:",
+        "type": "text"
+      },
+      {
+        "id": "q12098",
+        "label": "Thigh:",
+        "type": "text"
+      },
+      {
+        "id": "q12105",
+        "label": "Resting heart rate (if known):",
+        "type": "text"
+      },
+      {
+        "id": "q12136",
+        "label": "Blood pressure (if known):",
+        "type": "text"
+      },
+      {
+        "id": "q12164",
+        "label": "Please also send me three baseline photos:",
+        "type": "note"
+      },
+      {
+        "id": "q12208",
+        "label": "- Front — relaxed",
+        "type": "photo",
+        "when": {
+          "id": "photos",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q12226",
+        "label": "- Side — relaxed",
+        "type": "photo",
+        "when": {
+          "id": "photos",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q12243",
+        "label": "- Back — relaxed",
+        "type": "photo",
+        "when": {
+          "id": "photos",
+          "value": "Yes"
+        }
+      },
+      {
+        "id": "q12261",
+        "label": "These aren't about judging how you look. They're simply objective starting points so we can properly evaluate body-composition changes throughout the 90 days.",
+        "type": "note"
+      }
+    ]
+  },
+  {
+    "id": "s14",
+    "title": "Final questions",
+    "fields": [
+      {
+        "id": "q12446",
+        "label": "What do you believe is the biggest thing you need from me as your coach?",
+        "type": "textarea"
+      },
+      {
+        "id": "q12520",
+        "label": "What do you think you need to do differently over the next 90 days to get a different result?",
+        "type": "textarea"
+      },
+      {
+        "id": "q12615",
+        "label": "Is there anything you're worried about going into the program?",
+        "type": "textarea"
+      },
+      {
+        "id": "q12679",
+        "label": "Is there anything about your health, lifestyle, eating habits, training history, schedule, or personality that you think I should know that I haven't asked?",
+        "type": "textarea"
+      },
+      {
+        "id": "q12837",
+        "label": "What are you most excited to change over the next 90 days?",
+        "type": "textarea"
+      },
+      {
+        "id": "q12897",
+        "label": "And finally, if I give you a clear plan and we agree on exactly what needs to be done, are you prepared to commit to executing it consistently for the full 90 days?",
+        "type": "textarea"
+      },
+      {
+        "id": "q13063",
+        "label": "Take your time filling this out. Detail is much more useful to me than short answers.",
+        "type": "note"
+      },
+      {
+        "id": "q13150",
+        "label": "Once I have everything back, I'll have what I need to build your initial nutrition, strength, cardio, and return-to-cycling plan. We'll then use your weekly check-ins and progress data to make adjustments as we go.",
+        "type": "note"
+      },
+      {
+        "id": "q13366",
+        "label": "Looking forward to getting started.",
+        "type": "note"
+      }
+    ]
+  }
+]

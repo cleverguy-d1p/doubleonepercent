@@ -1,0 +1,14 @@
+"use client";
+import {useEffect,useState} from "react";
+import Link from "next/link";
+import {getClient} from "@/lib/supabase";
+import {sections,visible,type Answers} from "@/lib/questions";
+type Intake={user_id:string;email:string;status:string;answers:Answers;submitted_at:string|null};
+export default function Coach(){
+ const [records,setRecords]=useState<Intake[]>([]),[selected,setSelected]=useState<Intake|null>(null),[error,setError]=useState(""),[loading,setLoading]=useState(true);
+ useEffect(()=>{async function load(){try{const c=getClient();const {data:coach,error:check}=await c.rpc("is_coach");if(check||!coach)throw new Error("Sign in with an authorized coach account to view member intakes.");const {data,error}=await c.from("intakes").select("*").order("updated_at",{ascending:false});if(error)throw error;setRecords(data as Intake[]);}catch(e){setError((e as Error).message);}finally{setLoading(false);}}void load();},[]);
+ async function review(){if(!selected)return;const {error}=await getClient().rpc("review_intake",{member_id:selected.user_id});if(error){setError(error.message);return;}setRecords(records.map(r=>r.user_id===selected.user_id?{...r,status:"reviewed"}:r));setSelected({...selected,status:"reviewed"});}
+ async function photo(path:string){const {data,error}=await getClient().storage.from("baseline-photos").createSignedUrl(path,60);if(error){setError("Photo unavailable.");return;}window.open(data.signedUrl,"_blank","noopener,noreferrer");}
+ return <main className="privacy"><Link className="brand" href="/">D1P</Link><p className="eyebrow">COACH WORKSPACE</p><h1>Member intakes</h1>{loading?<p>Loading…</p>:null}{error?<p className="error" role="alert">{error} <Link href="/onboarding"><u>Sign in</u></Link></p>:null}
+ {selected?<><button className="secondary" onClick={()=>setSelected(null)}>← All members</button><h2>{selected.answers.q719||selected.email}</h2><p>{selected.status}</p>{sections.map(s=><details className="review" key={s.id}><summary>{s.title}</summary><dl>{s.fields.filter(f=>f.type!=="note"&&visible(f,selected.answers)).map(f=><div key={f.id}><dt>{f.label}</dt><dd>{f.type==="photo"&&selected.answers[f.id]?<button className="secondary" onClick={()=>photo(selected.answers[f.id])}>View private photo</button>:selected.answers[f.id]||"Not provided"}</dd></div>)}</dl></details>)}{selected.status==="submitted"?<button className="button" onClick={review}>Mark reviewed</button>:null}</>:<div className="coach-list">{records.map(r=><button className="coach-item" key={r.user_id} onClick={()=>setSelected(r)}><strong>{r.answers.q719||r.email}</strong><p>{r.status} · {r.submitted_at?new Date(r.submitted_at).toLocaleDateString():"Not submitted"}</p></button>)}{!loading&&!error&&!records.length?<p>No member intakes yet.</p>:null}</div>}</main>;
+}
