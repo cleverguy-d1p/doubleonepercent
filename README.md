@@ -10,13 +10,13 @@ Routes: `/` landing page, `/onboarding` member sign-in and intake, `/coach` auth
 
 ## Database
 
-The migration in `supabase/migrations/202609130001_onboarding.sql` was applied to D1P Fitness on September 13, 2026. Do not run it again against that project. Row-level security protects intakes and private baseline photos; writes go through authenticated database functions. `coaches` has no member write permissions. An administrator must authorize coach accounts after they sign in.
+The migrations in `supabase/migrations/202609130001_onboarding.sql` and `supabase/migrations/202609130002_expand_intake_fields.sql` were applied to D1P Fitness on September 13, 2026. Do not run them again against that project. Row-level security protects intakes and private baseline photos; writes go through authenticated database functions. `coaches` has no member write permissions. An administrator must authorize coach accounts after they sign in.
 
 A rollback-only test in the Supabase SQL editor verified member isolation, no member coach elevation, direct-write denial, unknown-answer rejection, conditional-answer cleanup, idempotent submission, and post-submission write protection. No test accounts were retained. Browser member sign-in, upload and cross-device resume still need end-to-end testing.
 
 ## Questionnaire
 
-`questionnaire-source.json` preserves the source document revision. `src/lib/questions.json` defines all 14 sections. Field IDs map to source paragraph positions; retain IDs when editing labels. Conditional rules currently cover macro targets, cycling applicability and optional photos. The database applies the same conditional cleanup.
+`questionnaire-source.json` preserves the source document revision. `src/lib/questions.json` defines 13 active sections and 192 fields, including the age field and three separate 90-day-goal answers. The cycling-history section from the source questionnaire is intentionally excluded. Field IDs map to source paragraph positions; retain IDs when editing labels. Conditional rules currently cover macro targets and optional photos. The database also retains cycling-answer cleanup for any legacy or manually supplied payloads.
 
 ## Before member launch
 

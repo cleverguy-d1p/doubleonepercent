@@ -14,6 +14,11 @@
         "type": "date"
       },
       {
+        "id": "q745",
+        "label": "Age:",
+        "type": "text"
+      },
+      {
         "id": "q750",
         "label": "Height:",
         "type": "text"
@@ -88,7 +93,22 @@
       {
         "id": "q1392",
         "label": "What are the three biggest things you'd like to accomplish over the next 90 days?",
-        "type": "textarea"
+        "type": "note"
+      },
+      {
+        "id": "q1475",
+        "label": "1.",
+        "type": "text"
+      },
+      {
+        "id": "q1478",
+        "label": "2.",
+        "type": "text"
+      },
+      {
+        "id": "q1481",
+        "label": "3.",
+        "type": "text"
       },
       {
         "id": "q1485",
@@ -706,247 +726,6 @@
         "id": "q8286",
         "label": "Can you comfortably squat, hinge, lunge, push, pull, and perform exercises overhead?",
         "type": "textarea"
-      }
-    ]
-  },
-  {
-    "id": "s9",
-    "title": "Cycling history & Goals",
-    "fields": [
-      {
-        "id": "cycling",
-        "label": "Is cycling part of your training or goals?",
-        "type": "select",
-        "options": [
-          "Yes",
-          "No"
-        ]
-      },
-      {
-        "id": "q8405",
-        "label": "Tell me about your previous cycling experience in as much detail as possible.",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8484",
-        "label": "What type of cycling did you primarily do?",
-        "type": "select",
-        "options": [
-          "Road",
-          "Mountain",
-          "Gravel",
-          "Indoor",
-          "Recreational",
-          "Competitive",
-          "Other"
-        ],
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8528",
-        "label": "Road / Mountain / Gravel / Indoor / Recreational / Competitive / Other",
-        "type": "note",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8600",
-        "label": "How long has it been since you were cycling consistently?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8659",
-        "label": "At your peak, approximately how many days per week were you riding?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8728",
-        "label": "Approximately how many miles/kilometers per week?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8779",
-        "label": "How long was a typical ride?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8809",
-        "label": "What was your longest regular ride?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8846",
-        "label": "What caused you to stop or reduce cycling?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8890",
-        "label": "Are you currently riding at all? If yes, describe your current weekly volume and intensity.",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q8983",
-        "label": "Do you currently own a bike and have access to it?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9035",
-        "label": "Do you have an indoor trainer?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9067",
-        "label": "Do you use Strava, Garmin, Zwift, or another cycling platform?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9131",
-        "label": "If known:",
-        "type": "note",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9142",
-        "label": "Previous/current FTP:",
-        "type": "text",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9164",
-        "label": "Typical average heart rate on rides:",
-        "type": "text",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9201",
-        "label": "Maximum heart rate:",
-        "type": "text",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9221",
-        "label": "Typical average speed:",
-        "type": "text",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9245",
-        "label": "Don't worry if you don't know these numbers.",
-        "type": "note",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9291",
-        "label": "When you currently ride or perform cardio, what seems to limit you first?",
-        "type": "select",
-        "options": [
-          "Breathing/cardio",
-          "Leg endurance",
-          "Strength",
-          "Body weight",
-          "Pain",
-          "Mobility",
-          "General conditioning",
-          "Other"
-        ],
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9366",
-        "label": "Breathing/cardio / Leg endurance / Strength / Body weight / Pain / Mobility / General conditioning / Other",
-        "type": "note",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9474",
-        "label": "Is your immediate goal simply to comfortably start cycling again, or do you eventually want to return to longer or more serious riding?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
-      },
-      {
-        "id": "q9611",
-        "label": "Do you have any specific cycling event, distance, trip, race, or date you'd eventually like to prepare for?",
-        "type": "textarea",
-        "when": {
-          "id": "cycling",
-          "value": "Yes"
-        }
       }
     ]
   },
