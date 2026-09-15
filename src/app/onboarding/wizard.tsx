@@ -70,8 +70,17 @@ export default function Wizard(){
   try{await save(answers,s);setStep(s);window.scrollTo({top:0,behavior:"instant"});setTimeout(()=>heading.current?.focus(),0);}
   catch(e){setError((e as Error).message);}finally{setBusy(false);}
  }
- async function exit(){
-  setBusy(true);try{await save(answers,step);await getClient().auth.signOut();}catch(e){setError((e as Error).message);}finally{setBusy(false);}
+ async function saveProgress(){
+  setBusy(true);setError("");
+  try{await save(answers,step);setStatus("Progress saved");}
+  catch(e){setError((e as Error).message);}finally{setBusy(false);}
+ }
+ async function logout(){
+  setBusy(true);setError("");
+  try{
+   if(ready&&!submitted&&!showPrimer)await save(answers,step);
+   await getClient().auth.signOut({scope:"local"});
+  }catch(e){setError((e as Error).message);}finally{setBusy(false);}
  }
  async function submit(){
   if(!consent)return;setBusy(true);setError("");
@@ -86,7 +95,7 @@ export default function Wizard(){
  const reviewStep=sections.length;
  const lastSectionStep=reviewStep-1;
  const section=sections[step];
- return <><header className="header"><Link className="brand" href="/">D1P<span>DOUBLE ONE PERCENT</span></Link>{session?<button className="secondary" disabled={busy||uploadCount>0} onClick={()=>submitted||showPrimer?getClient().auth.signOut():exit()}>{submitted||showPrimer?"Sign out":"Save & finish later"}</button>:<Link className="text-link" href="/">Back to home ↗</Link>}</header>
+ return <><header className="header"><Link className="brand" href="/">D1P<span>DOUBLE ONE PERCENT</span></Link>{session?<div className="header-actions">{!submitted&&!showPrimer?<button className="secondary" disabled={busy||uploadCount>0} onClick={saveProgress}>Save Progress</button>:null}<button className="text-button" disabled={busy||uploadCount>0} onClick={logout}>Log out</button></div>:<Link className="text-link" href="/">Back to home ↗</Link>}</header>
  {loading?<main className="auth"><p role="status">Loading your intake…</p></main>:!session?<main className="auth"><p className="eyebrow">YOUR NEXT CHAPTER</p><h1>Let’s get to know you.</h1><p>Sign in with your email to start your intake or pick up where you left off.</p>{error?<p className="error" role="alert">{error}</p>:null}
  {!sent?<form onSubmit={login}><label className="field"><span>Email address</span><input type="email" autoComplete="email" required value={email} onChange={e=>setEmail(e.target.value)}/></label><button className="button" disabled={busy||uploadCount>0}>Send sign-in email ↗</button></form>:<><p className="notice">Check {email} for your sign-in link, then open it in this browser to start or resume your intake.</p><p><button className="secondary" onClick={()=>setSent(false)}>Use another email or resend</button></p></>}<p className="small">Your intake is private. <Link href="/privacy"><u>Read how your information is used.</u></Link></p></main>
  :submitted?<main className="auth"><p className="eyebrow">INTAKE COMPLETE</p><h1>You’ve taken the first step.</h1><p>Your intake has been received. Your coach will review your answers and contact you to arrange your launch call, approximately three days from now.</p><Link className="button" href="/">Back to home ↗</Link></main>
