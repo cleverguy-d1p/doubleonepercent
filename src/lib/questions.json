@@ -264,7 +264,11 @@
       {
         "id": "q4058",
         "label": "If yes, approximately:",
-        "type": "note"
+        "type": "note",
+        "when": {
+          "id": "q4006",
+          "value": "Yes"
+        }
       },
       {
         "id": "q4082",
@@ -521,27 +525,47 @@
       {
         "id": "q6495",
         "label": "Do you currently do cardio? If yes:",
-        "type": "text"
+        "type": "select",
+        "options": [
+          "Yes",
+          "No"
+        ]
       },
       {
         "id": "q6532",
         "label": "Type:",
-        "type": "text"
+        "type": "text",
+        "when": {
+          "id": "q6495",
+          "value": "Yes"
+        }
       },
       {
         "id": "q6538",
         "label": "Days per week:",
-        "type": "text"
+        "type": "text",
+        "when": {
+          "id": "q6495",
+          "value": "Yes"
+        }
       },
       {
         "id": "q6553",
         "label": "Duration:",
-        "type": "text"
+        "type": "text",
+        "when": {
+          "id": "q6495",
+          "value": "Yes"
+        }
       },
       {
         "id": "q6563",
         "label": "Typical intensity:",
-        "type": "text"
+        "type": "text",
+        "when": {
+          "id": "q6495",
+          "value": "Yes"
+        }
       },
       {
         "id": "q6583",
@@ -724,7 +748,7 @@
       },
       {
         "id": "q8286",
-        "label": "Can you comfortably squat, hinge, lunge, push, pull, and perform exercises overhead?",
+        "label": "Do any of these movements feel uncomfortable or difficult: squat, hinge, lunge, push, pull, or exercises overhead?",
         "type": "textarea"
       }
     ]
@@ -755,7 +779,7 @@
       },
       {
         "id": "q9865",
-        "label": "Do you normally wake up feeling rested?",
+        "label": "Do you normally wake up feeling unrested?",
         "type": "textarea"
       },
       {
@@ -802,12 +826,20 @@
       {
         "id": "q10352",
         "label": "Have you successfully lost body fat before?",
-        "type": "textarea"
+        "type": "select",
+        "options": [
+          "Yes",
+          "No"
+        ]
       },
       {
         "id": "q10397",
         "label": "If yes, how much did you lose, how did you do it, and were you able to maintain it?",
-        "type": "textarea"
+        "type": "textarea",
+        "when": {
+          "id": "q10352",
+          "value": "Yes"
+        }
       },
       {
         "id": "q10482",
@@ -827,17 +859,29 @@
       {
         "id": "q10592",
         "label": "Have you previously worked with a personal trainer, nutritionist, or online coach?",
-        "type": "textarea"
+        "type": "select",
+        "options": [
+          "Yes",
+          "No"
+        ]
       },
       {
         "id": "q10676",
         "label": "If yes, what did you like about the experience?",
-        "type": "textarea"
+        "type": "textarea",
+        "when": {
+          "id": "q10592",
+          "value": "Yes"
+        }
       },
       {
         "id": "q10725",
         "label": "What didn't you like?",
-        "type": "textarea"
+        "type": "textarea",
+        "when": {
+          "id": "q10592",
+          "value": "Yes"
+        }
       },
       {
         "id": "q10748",

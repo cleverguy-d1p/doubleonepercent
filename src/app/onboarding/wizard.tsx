@@ -3,7 +3,7 @@ import {useEffect,useRef,useState} from "react";
 import Link from "next/link";
 import type {Session} from "@supabase/supabase-js";
 import {getClient} from "@/lib/supabase";
-import {sections,visible,cleanAnswers,type Answers,type Field} from "@/lib/questions";
+import {sections,visible,cleanAnswers,yesNoOnly,yesNoDetails,type Answers,type Field} from "@/lib/questions";
 
 export default function Wizard(){
  const [session,setSession]=useState<Session|null>(null);
@@ -12,6 +12,7 @@ export default function Wizard(){
  const [answers,setAnswers]=useState<Answers>({}),[step,setStep]=useState(0);
  const [busy,setBusy]=useState(false),[error,setError]=useState(""),[status,setStatus]=useState("");
  const [submitted,setSubmitted]=useState(false),[consent,setConsent]=useState(false);
+ const [showPrimer,setShowPrimer]=useState(true);
  const queue=useRef<Promise<void>>(Promise.resolve());
  const heading=useRef<HTMLHeadingElement>(null);
  const dirty=useRef(false);
@@ -32,7 +33,7 @@ export default function Wizard(){
      if(error){setError("We couldn’t load your intake. Please refresh and try again.");setLoading(false);return;}
      if(data){setAnswers(data.answers as Answers);setStep(data.current_step);setSubmitted(data.status!=="draft");}
      setReady(true);
-    }else{setReady(false);setAnswers({});setStep(0);setSubmitted(false);}
+    }else{setReady(false);setAnswers({});setStep(0);setSubmitted(false);setShowPrimer(true);}
     setLoading(false);
    }
    client.auth.getSession().then(({data})=>init(data.session));
@@ -85,11 +86,12 @@ export default function Wizard(){
  const reviewStep=sections.length;
  const lastSectionStep=reviewStep-1;
  const section=sections[step];
- return <><header className="header"><Link className="brand" href="/">D1P<span>DOUBLE ONE PERCENT</span></Link>{session?<button className="secondary" disabled={busy||uploadCount>0} onClick={()=>submitted?getClient().auth.signOut():exit()}>{submitted?"Sign out":"Save & finish later"}</button>:<Link className="text-link" href="/">Back to home ↗</Link>}</header>
+ return <><header className="header"><Link className="brand" href="/">D1P<span>DOUBLE ONE PERCENT</span></Link>{session?<button className="secondary" disabled={busy||uploadCount>0} onClick={()=>submitted||showPrimer?getClient().auth.signOut():exit()}>{submitted||showPrimer?"Sign out":"Save & finish later"}</button>:<Link className="text-link" href="/">Back to home ↗</Link>}</header>
  {loading?<main className="auth"><p role="status">Loading your intake…</p></main>:!session?<main className="auth"><p className="eyebrow">YOUR NEXT CHAPTER</p><h1>Let’s get to know you.</h1><p>Sign in with your email to start your intake or pick up where you left off.</p>{error?<p className="error" role="alert">{error}</p>:null}
  {!sent?<form onSubmit={login}><label className="field"><span>Email address</span><input type="email" autoComplete="email" required value={email} onChange={e=>setEmail(e.target.value)}/></label><button className="button" disabled={busy||uploadCount>0}>Send sign-in email ↗</button></form>:<><p className="notice">Check {email} for your sign-in link, then open it in this browser to start or resume your intake.</p><p><button className="secondary" onClick={()=>setSent(false)}>Use another email or resend</button></p></>}<p className="small">Your intake is private. <Link href="/privacy"><u>Read how your information is used.</u></Link></p></main>
  :submitted?<main className="auth"><p className="eyebrow">INTAKE COMPLETE</p><h1>You’ve taken the first step.</h1><p>Your intake has been received. Your coach will review your answers and contact you to arrange your launch call, approximately three days from now.</p><Link className="button" href="/">Back to home ↗</Link></main>
  :!ready?<main className="auth"><p role="alert" className="error">{error}</p></main>
+ :showPrimer?<main className="auth primer"><p className="eyebrow">YOUR 90-DAY START</p><h1>Before we get started.</h1><p>This intake gives your coach the context needed to build a plan around your goals, health, schedule, and preferences.</p><ul><li>Set aside about 20–30 minutes.</li><li>Answer honestly and include detail where it helps.</li><li>You can save your progress and return later.</li><li>Skip measurements or sensitive information you do not know or prefer not to share.</li></ul><button className="button" onClick={()=>setShowPrimer(false)}>Start my intake ↗</button></main>
  :<main className="wizard"><aside className="sidebar"><p className="eyebrow">YOUR ONBOARDING</p><ol>{sections.map((s,i)=><li key={s.id}><button disabled={busy||uploadCount>0} className={i===step?"active":""} onClick={()=>move(i)}><span>{String(i+1).padStart(2,"0")}</span>{s.title}</button></li>)}<li><button className={step===reviewStep?"active":""} disabled={busy||uploadCount>0} onClick={()=>move(reviewStep)}><span>↗</span>Review & submit</button></li></ol><p className="small">Details help us build a better plan. Unknown measurements and sensitive disclosures can be skipped.</p></aside>
  <section className="form"><p className="eyebrow">{step<reviewStep?`SECTION ${step+1} OF ${sections.length}`:"READY WHEN YOU ARE"}</p><div className="progress" role="progressbar" aria-label="Onboarding progress" aria-valuenow={step} aria-valuemin={0} aria-valuemax={reviewStep}><div style={{width:`${step/reviewStep*100}%`}}/></div><h1 ref={heading} tabIndex={-1}>{section?.title||"Review your intake"}</h1><p className="save-status" role="status">{status}</p>{error?<p role="alert" className="error">{error} <button className="secondary" disabled={busy||uploadCount>0} onClick={()=>{setError("");void save(answers,step).catch(()=>{});}}>Retry save</button></p>:null}
  {step<reviewStep?<form onSubmit={e=>{e.preventDefault();void move(step+1);}}><p className="intro">Share what you can. You can come back to any section before submitting.{step===0?" Include units with measurements (for example, 180 lb or 82 kg).":""}</p>
@@ -116,6 +118,17 @@ function Question({field:f,value,onChange,userId,onError,onUploading}:{field:Fie
  }
  if(f.type==="note")return <p className="note">{f.label}</p>;
  if(f.type==="photo")return <label className="field"><span>{f.label.replace("- ","")}</span><input type="file" accept="image/jpeg,image/png,image/webp" disabled={uploading} onChange={e=>void upload(e.target.files?.[0])}/><span className="note" role="status">{uploading?"Uploading…":value?"Photo saved privately. Choose another file to replace it.":"JPEG, PNG or WebP · up to 10 MB"}</span></label>;
+ const detailRule=yesNoDetails[f.id];
+ if(yesNoOnly.has(f.id)||detailRule){
+  const choice=value==="Yes"||value.startsWith("Yes\n")?"Yes":value==="No"||value.startsWith("No\n")?"No":"";
+  const details=choice&&value.startsWith(`${choice}\n`)?value.slice(choice.length+1):"";
+  const detailsWhen=detailRule?.detailsWhen||"Yes";
+  const showDetails=Boolean(detailRule&&choice===detailsWhen);
+  function choose(next:"Yes"|"No"){
+   onChange(detailRule&&next===detailsWhen?`${next}\n`:next);
+  }
+  return <fieldset className="field-group"><legend>{f.label}</legend><div className="yes-no" role="radiogroup" aria-label={f.label}><label><input type="radio" name={f.id} checked={choice==="Yes"} onChange={()=>choose("Yes")}/><span>Yes</span></label><label><input type="radio" name={f.id} checked={choice==="No"} onChange={()=>choose("No")}/><span>No</span></label></div>{showDetails?<label className="detail"><span>{detailRule!.prompt}</span><textarea required maxLength={5000} rows={3} value={details} onChange={e=>onChange(`${choice}\n${e.target.value}`)}/></label>:null}</fieldset>;
+ }
  const options=f.type==="scale"?Array.from({length:10},(_,i)=>String(i+1)):f.options;
  return <label className="field"><span>{f.label}</span>{options?<select value={value} onChange={e=>onChange(e.target.value)}><option value="">Select an answer</option>{options.map(o=><option key={o}>{o}</option>)}</select>:f.type==="textarea"?<textarea maxLength={5000} rows={3} value={value} onChange={e=>onChange(e.target.value)}/>:<input type={f.type==="date"?"date":"text"} max={f.type==="date"?new Date().toISOString().slice(0,10):undefined} required={f.id==="q719"} maxLength={500} autoComplete={f.id==="q719"?"name":"off"} value={value} onChange={e=>onChange(e.target.value)}/>}</label>;
 }
