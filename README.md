@@ -16,7 +16,7 @@ A rollback-only test in the Supabase SQL editor verified member isolation, no me
 
 ## Questionnaire
 
-`questionnaire-source.json` preserves the source document revision. `src/lib/questions.json` defines 13 active sections and 192 fields, including the age field and three separate 90-day-goal answers. The cycling-history section from the source questionnaire is intentionally excluded. Field IDs map to source paragraph positions; retain IDs when editing labels. Conditional rules currently cover macro targets and optional photos. The database also retains cycling-answer cleanup for any legacy or manually supplied payloads.
+`questionnaire-source.json` preserves the source document revision. `src/lib/questions.json` defines 12 active sections and 177 fields, including the age field and three separate 90-day-goal answers. The cycling-history and baseline-measurements/photos sections from the source questionnaire are intentionally excluded. Field IDs map to source paragraph positions; retain IDs when editing labels. Conditional rules currently cover macro targets and follow-up answers. The database retains support for legacy fields that are no longer shown by the wizard.
 
 ## Before member launch
 
